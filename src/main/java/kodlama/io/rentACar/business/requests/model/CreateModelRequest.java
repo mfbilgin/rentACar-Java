@@ -1,4 +1,4 @@
-package kodlama.io.rentACar.business.requests.brand;
+package kodlama.io.rentACar.business.requests.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,9 +11,10 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateBrandRequest {
-    @NotBlank
+public class CreateModelRequest {
     @NotNull
+    @NotBlank
     @Size(min = 2, max = 20)
     private String name;
+    private int brandId;
 }
